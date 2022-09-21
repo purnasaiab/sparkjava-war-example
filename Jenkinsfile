@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('check-out') {
             steps {
-                sh 'git clone git@github.com:purnasaiab/sparkjava-war-example.git'
+                git 'git@github.com:purnasaiab/sparkjava-war-example.git'
             }
         }
         stage('mvn package') {
