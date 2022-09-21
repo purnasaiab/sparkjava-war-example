@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('check-out') {
             steps {
-                sh 'rm -fr'
                 sh 'git clone git@github.com:purnasaiab/sparkjava-war-example.git'
             }
         }
