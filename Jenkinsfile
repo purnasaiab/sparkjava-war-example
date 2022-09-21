@@ -20,8 +20,8 @@ pipeline {
         }
         stage('cd process') {
             steps {
-                sh 'aws s3 cp s3://artifactoty-java/sparkjava-hello-world-$BUILD_NUMBER.war .'
-                sh 'scp -r sparkjava-hello-world-$BUILD_NUMBER.war root@172.31.11.49:/opt/tomcat9/webapps'
+                sh 'aws s3 cp s3://artifactoty-java/sparkjava-hello-world-$PKG.war .'
+                sh 'scp -r sparkjava-hello-world-$PKG.war root@172.31.11.49:/opt/tomcat9/webapps'
             }
         }
     
